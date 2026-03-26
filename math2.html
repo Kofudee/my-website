@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ja">
+<!--head-->
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2025信州大学理学部数学完全解説</title>
+<link rel="stylesheet" href="style.css">
+
+<!-- KaTeX -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+onload="renderMathInElement(document.body);"></script>
+</head>
+<!--/head-->
+
+<!--body-->
+<body>
+    <header>
+        <h1>2025信州大学理学部数学完全解説</h1>
+    </header>
+
+    <!--ナビ-->
+    <nav class="side-nav">
+        <h6>問題ナビ</h6>
+        <a href="C:\HTML\univercity\shinsyu\2025\math\top.html">Top</a>
+        <a href="C:\HTML\univercity\shinsyu\2025\math\math1.html">大問1⃣</a>
+        <a href="C:\HTML\univercity\shinsyu\2025\math\math2.html">大問2⃣</a>
+        <a href="C:\HTML\univercity\shinsyu\2025\math\math3.html">大問3⃣</a>
+        <a href="C:\HTML\univercity\shinsyu\2025\math\math4.html">大問4⃣</a>
+        <a href="C:\HTML\univercity\shinsyu\2025\math\math5.html">大問5⃣</a>
+    </nav>
+
+    <main>
+
+
+        <!-- 問題 -->
+        <section id="problem2">
+            <img src="shinsyu_science_2025_2.png">
+            
+        </section>
+
+        <!--方針-->
+        <section class="plan">
+            <h2>方針</h2>
+            <p>\(2^t\) = x と置くことで見慣れたxの方程式にする。(範囲に注意!)
+                <br>最大最小問題は<span class="bold-txt">増減表</span>を意識。</p>
+        </section>
+        
+        <!-- 広告 -->
+         <div class="ad">
+            広告スペース
+        </div>
+        
+        <!-- 解説 -->
+        <section class="solution">
+
+            <h2>Ⅰ\(2^t\) = xと置く</h2>
+            <p>\(2^t\) = xと置く。(0 ≦ t ≦ 3)より <span class="math">$$ f(t) = 12x + 8x^2 - x^3 (1 ≦ x ≦ 8) $$</span>となる。
+                これをg(x)とする。
+            </p>
+
+            <h2>Ⅱ微分する</h2>
+            <p>g(x)は三次式であるから微分して増減表を作る。微分すると、<span class="math">$$ g'(x) = 12 + 16x - 3x^2 $$</span>となる。
+                g'(x) = 0となるとき<span class="math">$$ g'(x) = -(3x + 2)(x - 6) = 0 $$</span>より、<span class="math">$$ x = \frac{-2}{3}, 6 $$</span>
+            </p>
+
+            <h2>Ⅲ増減表を作る</h2>
+            <p>(1 ≦ x ≦ 8)の範囲で増減表をつくる。
+                <br>g(1) = 12 + 8 - 1 = 10, g(6) = 72 + 288 - 216 = 144, g(8) = 96 + 512 - 512 = 96
+                <br>であるから、以下のような表になる。
+            </p>
+            <table class="math">
+                $$
+                <tr>
+                    <th>\( x \)</th>
+                    <th>\( 1 \)</th>
+                    <th> </th>
+                    <th>\( 6 \)</th>
+                    <th> </th>
+                    <th>\( 8 \)</th>
+                </tr>
+                <tr>
+                    <th>\( f'(x) \)</th>
+                    <td>×</td>
+                    <td>+</td>
+                    <td>0</td>
+                    <td>-</td>
+                    <td>×</td>
+                </tr>
+                <tr>
+                    <th>\( f(x) \)</th>
+                    <td>10</td>
+                    <td>↗</td>
+                    <td>144</td>
+                    <td>↘</td>
+                    <td>96</td>
+                </tr>
+                $$
+            </table>
+
+            <p>したがって増減表より
+                <span class="math">$$ 最大値 144 (x = 6) $$</span>
+                <span class="math">$$最小値 10 (x = 1) $$</span>
+            </p>
+
+            <h2>Ⅳtの値を求める</h2>
+            <p>\(2^t\) = xより
+                <span class="math">$$ 2^t = 1 ⇔ t = 0 $$</span>
+                <span class="math">$$ 2^t = 6 ⇔ t = \log_2{6} $$</span>
+            </p>
+
+            <h2>結果</h2>
+            <p class="math">$$ 最小値10 (t = 0) $$</p>
+            <p class="math">$$ 最大値144 (t = \log_2{6}) $$</p>
+
+        </section>
+
+        <!--講評-->
+        <section class="point">
+
+            <h2>重要Point</h2>
+            <p>問題の内容自体は共通テストに似ているが、誘導が全くない問題。典型問題であるので重要度★★★★☆ほど。
+                <span class="bold-txt">最大最小問題</span>の目標は基本<span class="math">$$増減表を描く$$</span>こと。ただ、二次式の場合は平方完成を用いて図示するほうが簡単である。
+                指数関数のままでは微分しにくいので\(2^t\) = xと置くことでxの多項式にすることができる。この時に必ず注意しなければならないのはxの範囲。
+                tに範囲がない場合は<span class="math">$$ x > 0 $$</span>となることを頭に入れておく。これは指数関数のグラフをイメージすると導きやすい。
+                <br>\(2^{t+2}\)のような形は\(2^t ・ 2^2 = 4 ・ 2^t\)と置き換えることができる。これができたらあとは微分して範囲に注意しながら増減表を描くのみ。
+                <br>\(2^t = x\)のような変換はよく見かける変換になる。例えば<span class="math">$$ f(t) = 6・3^t + 12・9^t - 27^t $$</span>は\(3^t = x\)とおくことになる。
+            </p>
+
+        </section>
+
+    </main>
+
+<footer>
+    <a href="C:\HTML\MathWebSite\shinsyu_2025\privacy-policy.html">プライバシーポリシー.</a>
+<p>(C)2026 スッキリ数学ラボ.</p>
+</footer>
+
+</body>
+</html>
