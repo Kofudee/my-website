@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ja">
+<!--head-->
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2025信州大学理学部数学完全解説</title>
+<link rel="stylesheet" href="style.css">
+
+<!-- KaTeX -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+onload="renderMathInElement(document.body);"></script>
+</head>
+<!--/head-->
+
+<!--body-->
+<body>
+    <header>
+        <h1>2025信州大学理学部数学完全解説</h1>
+    </header>
+
+    <!--ナビ-->
+    <nav class="side-nav">
+        <h6>問題ナビ</h6>
+        <a href="C:\HTML\univercity\shinsyu\2025\math\top.html">Top</a>
+        <a href="C:\HTML\univercity\shinsyu\2025\math\math1.html">大問1⃣</a>
+        <a href="C:\HTML\univercity\shinsyu\2025\math\math2.html">大問2⃣</a>
+        <a href="C:\HTML\univercity\shinsyu\2025\math\math3.html">大問3⃣</a>
+        <a href="C:\HTML\univercity\shinsyu\2025\math\math4.html">大問4⃣</a>
+        <a href="C:\HTML\univercity\shinsyu\2025\math\math5.html">大問5⃣</a>
+    </nav>
+
+    <main>
+
+        <!-- 問題 -->
+        <section id="problem2">
+            <img src="shinsyu_science_2025_5.png">
+            
+        </section>
+
+        <!--方針-->
+        <section class="plan">
+            <h2>方針</h2>
+            <p>
+                (1) <span class="bold-txt">差が1</span>であるときは<span class="bold-txt">{1,2}のみまたは{2,3}のみ</span>の場合である。
+                <br>    <span class="bold-txt">差がn-1</span>であるということは <span class="bold-txt">最大がn、最小が1</span>であるときのみ。
+                <br>(3)\(\frac{(定数)}{n^m}(m > 0)\)はnを無限大にとばすと0になることがポイント。
+            </p>
+        </section>
+        
+        <!-- 広告 -->
+         <div class="ad">
+            広告スペース
+        </div>
+        
+        <!-- 解説 -->
+        <section class="solution">
+
+            <h2>解説</h2>
+            <h2>(1)差が1のとき</h2>
+            <p>差が1であるのは{1,2}または{2,3}のときのみ。これは2通りが10個で
+                <span class="math">$$ 2^{10}通り $$</span>
+                から1種類の数字のみの場合を除いた
+                <span class="math">$$ 2^{10} - 2通り $$</span>
+                つまり
+                <span class="math">$$ 1024 - 2 = 1022 $$</span>
+                {1,2}と{2,3}の二つの場合があるので
+                <span class="math">$$1022 × 2 = 2044通り$$</span>
+            </p>
+
+            <h2>(2)差がn-1のとき</h2>
+            <p>差がn-1であるのは少なくとも{1,n}が1個出る場合。1,nが全くで出ない場合の余事象を考える。
+                <br>全事象は
+                <span class="math">$$ n^{10} 通り$$</span>
+                1を含まないのは
+                <span class="math">$$ (n-1)^{10} 通り$$</span>
+                nを含まないも
+                <span class="math">$$ (n - 1)^{10} 通り$$</span>
+                そして、1,nの両方を含まない場合は
+                <span class="math">$$ (n - 2)^{10} 通り$$</span>
+                よって、余事象は
+                <span class="math">$$ n^{10} - 2(n-1)^{10} - (n-2)^{10} 通り$$</span>
+                となる。
+            </p>
+
+            <h2>(3)極限を求める。</h2>
+            <p>\(A_n\) は(2)の解答から
+                <span class="math">$$ A_n = n^{10} - 2(n-1)^{10} + (n-2)^{10} $$</span>
+                となる。\(A_n\)の第2,3項を展開することを考える。ただ、展開した後にnの指数が8以下であるときn^8で割ると
+                \(\frac{(定数)}{n^m}\)となりn→∞のとき0に収束する。つまり\(n^{10}\),\(n^9\),\(n^8\)の係数のみを考える
+
+                <br>(ⅰ)\(n^{10}\)の係数
+                <br>展開すると1項目は1,2項目は-2,3項目は1。よって0となる。
+
+                <br>(ⅱ)\(n^9\)の係数
+                <br>2項目は-20,3項目は20。よって0となる。
+
+                <br>(ⅲ)\(n^8\)の係数
+                <br>2項目は-90,3項目は180。よって90。
+
+                つまり\(n^8\)で割ったとき残るのは90のみ。したがって
+                <span class="math">$$ \lim_{n \to \infty} \frac{A_n}{n^8} = 90 $$</span>
+            </p>
+
+        </section>
+
+        <!--講評-->
+        <section class="point">
+
+            <h2>重要Point</h2>
+            <p>問題がぞれぞれ何を意味するか気づければかんたん。具体的に、(1)は{1,2}または{2,3}のみであること。(2)は{1,n}が少なくとも1つあること。(3)は\(n^7 ～ n^1\)は考えなくてよいことである。
+                (2)ではベン図をイメージするとわかりやすい。1がない集合をA、nがない集合をBとすると、式は
+                <span class="math">$$ n(A ∨ B) = n(A) + n(B) - n(A ∧ B) $$</span>
+                となる。よって解説のような式になる。
+                この問題は文章を読んでパッと目標を立てにくい問題である。だが、問題文が何を表しているかを整理することで次に何をすべきかが明確になるだろう。
+            </p>
+
+        </section>
+
+    </main>
+
+<footer>
+    <a href="C:\HTML\MathWebSite\shinsyu_2025\privacy-policy.html">プライバシーポリシー.</a>
+<p>(C)2026 スッキリ数学ラボ.</p>
+</footer>
+
+</body>
+</html>
