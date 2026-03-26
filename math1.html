@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ja">
+<!--head-->
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2025信州大学理学部数学完全解説</title>
+<link rel="stylesheet" href="style.css">
+
+<!-- KaTeX -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+onload="renderMathInElement(document.body);"></script>
+</head>
+<!--/head-->
+
+<!--body-->
+<body>
+    <header>
+        <h1>2025信州大学理学部数学完全解説</h1>
+    </header>
+
+    <!--ナビ-->
+    <nav class="side-nav">
+        <h6>問題ナビ</h6>
+        <a href="C:\HTML\univercity\shinsyu\2025\math\top.html">Top</a>
+        <a href="C:\HTML\univercity\shinsyu\2025\math\math1.html">大問1⃣</a>
+        <a href="C:\HTML\univercity\shinsyu\2025\math\math2.html">大問2⃣</a>
+        <a href="C:\HTML\univercity\shinsyu\2025\math\math3.html">大問3⃣</a>
+        <a href="C:\HTML\univercity\shinsyu\2025\math\math4.html">大問4⃣</a>
+        <a href="C:\HTML\univercity\shinsyu\2025\math\math5.html">大問5⃣</a>
+    </nav>
+
+    <main>
+
+        <!-- 問題 -->
+        <section id="problem1">
+            <img src="shinsyu_science_2025_1.png">
+            
+        </section>
+
+        <!--方針-->
+        <section class="plan">
+            <h2>方針</h2>
+            <p>(1) \(\vec{OP}\) を<span class="bold-txt">平面と直線</span>から表す。</p>
+            <p>(2) <span class="bold-txt">共通の頂点</span>を持つ体積の比→<span class="bold-txt">辺の比</span></p>
+            <p>(3) <span class="bold-txt">共通の底面</span>を持つ体積の比→<span class="bold-txt">高さの比</span></p>
+            <p>ベクトルでは<span class="bold-txt">すべてのベクトルを基準ベクトルで</span>表すようにする。
+                <br>今回の基準ベクトルは \(\vec{a}\), \(\vec{b}\), \(\vec{c}\) である。
+            </p>
+        </section>
+        
+        <!-- 広告 -->
+         <div class="ad">
+            広告スペース
+        </div>
+        
+        <!-- 解説 -->
+        <section class="solution">
+
+            <h2>基準ベクトルであらわす。</h2>
+            <p>\(\vec{OD}\), \(\vec{OE}\), \(\vec{OF}\), \(\vec{OG}\)を基準ベクトルで表すと、
+                <span class="math">$$ \vec{OD} = \frac{1}{3}\vec{a}, \vec{OE} = \frac{3}{5}\vec{b}, \vec{OF} = \frac{1}{2}\vec{c}, \vec{OG} = \frac{1}{3}(\vec{a} + \vec{b} + \vec{c}) $$</span>
+            </p>
+            
+            <!--(1)-->
+            <h2>(1) \(\vec{OP}\)を \(\vec{a}\), \(\vec{b}\), \(\vec{c}\)で表す。</h2>
+            <p>点Pは直線OG上にあり且つ、平面DEF上にある。</p>
+            <p>(ⅰ)直線OG上の点をRとする。実数r(0 ≦ r ≦ 1)を用いて<span class="math">$$ OR : RG = r : 1-r $$</span></p>
+            <p>とできる。したがって\(\vec{OR}\)は</p>
+            <p class="math">$$ \vec{OR} = r \vec{OG}$$</p>
+            <p>と表せる。整理すると、</p>
+            <p clas="math">$$ \vec{OR} = \frac{r}{3} (\vec{a} + \vec{b} + \vec{c}) \qquad ① $$ </p>
+            <p>(ⅱ)平面DEF上の点をQとすると、実数s,tを用いて</p>
+            <p class="math">$$ \vec{OQ} = \vec{OD} + s \vec{DE} + t \vec{DF} $$</p>
+            <p>である。整理すると</p>
+            <p class="math">$$ \vec{OQ} = \frac{1}{3}(1 - s - t)\vec{a} + \frac{3}{5} t \vec{b} + \frac{1}{2}s\vec{c} \qquad ②$$</p>
+            <p>点Rと点Qが一致するその点が点Pとなるので①②より</p>
+            <p class="math">$$ \begin{cases} \frac{r}{3} = \frac{1}{3}(1 - s - t)\\
+                \frac{r}{3} = \frac{3}{5}t\\
+                \frac{r}{3} = \frac{1}{2}s \end{cases}$$
+            </p>
+            <p>計算し、pまたはs,tを求めると、</p>
+            <p class="math">$$ p = \frac{3}{20} , s = \frac{3}{10} , t = \frac{1}{12} $$</p>
+            <p>よって\(\vec{OP}\)は<span class="math">$$ \vec{OP} = \frac{3}{20} (\vec{a} + \vec{b} + \vec{c}) $$</span></p>
+
+            <!--(2)-->
+            <h2>(2)四面体ODEFの体積</h2>
+            <p>四面体OABCと<span class="bold-txt">共通の頂点O</span>を持つ→ <span class="bold-txt">辺の比</span>から体積を考える。</p>
+            <p>四面体ODEFの体積をKとすると、<span class="math">$$ K = \frac{OD}{OA} ・ \frac{OE}{OB} ・ \frac{OF}{OC} ・V$$</span>
+            とできる。\(\frac{OD}{OA}\) = \(\frac{1}{3}\), \(\frac{OE}{OB}\) = \(\frac{3}{5}\), \(\frac{OF}{OC}\) = \(\frac{1}{2}\)であるので計算すると、</p>
+            <p class="math">$$ K = \frac{1}{3} ・ \frac{3}{5} ・ \frac{1}{2} ・V = \frac{1}{10}V $$</p>
+            
+            <!--(3)-->
+            <h2>(3)四面体GDEFの体積</h2>
+            <p>四面体ODEFと四面体GDEFは<span class="bold-txt">共通の底面DEF</span>を持つ→<span class="bold-txt">高さの比</span>から体積を考える。
+            <br>OP : PG = \(\frac{9}{20}\) : \(\frac{11}{20}\) = 9 : 11なので四面体GDEFの体積をLとすると
+            <span class="math">$$ L = \frac{11}{9} ・ \frac{1}{10}V = \frac{11}{90}V $$</span></p>
+
+        </section>
+
+        <!--講評-->
+        <section class="point">
+
+            <h2>重要Point</h2>
+            <p>(1) 直線と平面の交点を表す問題。<span class="bold-txt">直線と直線の交点</span>や<span class="bold-txt">直線と平面の交点</span>を表す問題は
+                基本、<span class="bold-txt">点の一致</span>を考える。
+                平面上を動く点(今回のQ)と、直線上を動く点(今回のR)が一致、即ち <span class="math">$$ \vec{OR} = \vec{OQ} $$</span>
+                を第一目標にできたかが重要。これがわかれば\(\vec{OR}\), \(\vec{OQ}\)を基準ベクトルで表し係数を比較して解ける。
+                変数を三つ設定することになり不安になるかもしれないが、係数を三個で比較すると気付けるようになれば安心である。
+                頻出の考え方なので抑えておこう。
+            </p>
+            <p>(2) 辺の比から体積を考える問題。大きな四面体を切ってできるような四面体の体積を考えるときは基本これ。<span class="bold-txt">共通している部分</span>が何かわかると
+                何によって体積が決まっているかわかる。(今回は辺の比)これに関して比例式を立てると簡単である。
+            </p>
+            <p>(3) 高さの比から体積を考える問題。底面が共通しているので高さによって体積が決定する。</p>
+
+        </section>
+
+    </main>
+
+<footer>
+    <a href="C:\HTML\univercity\shinsyu\2025\math\privacy-policy.html">プライバシーポリシー.</a>
+<p>(C)2026 スッキリ数学ラボ.</p>
+</footer>
+
+</body>
+</html>
