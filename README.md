@@ -1,1 +1,1 @@
-# univercity-shinsyu-2025-math.github.io
+# univercity-shinsyu-2025-math
