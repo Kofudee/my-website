@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ja">
+<!--head-->
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2025信州大学理学部数学完全解説</title>
+<link rel="stylesheet" href="style.css">
+
+<!-- KaTeX -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+onload="renderMathInElement(document.body);"></script>
+</head>
+<!--/head-->
+
+<!--body-->
+<body>
+    <header>
+        <h1>2025信州大学理学部数学完全解説</h1>
+    </header>
+
+    <!--ナビ-->
+    <nav class="side-nav">
+        <h6>問題ナビ</h6>
+        <a href="C:\HTML\univercity\shinsyu\2025\math\top.html">Top</a>
+        <a href="C:\HTML\univercity\shinsyu\2025\math\math1.html">大問1⃣</a>
+        <a href="C:\HTML\univercity\shinsyu\2025\math\math2.html">大問2⃣</a>
+        <a href="C:\HTML\univercity\shinsyu\2025\math\math3.html">大問3⃣</a>
+        <a href="C:\HTML\univercity\shinsyu\2025\math\math4.html">大問4⃣</a>
+        <a href="C:\HTML\univercity\shinsyu\2025\math\math5.html">大問5⃣</a>
+    </nav>
+
+    <main>
+
+        <!-- 問題 -->
+        <section id="problem1">
+            <img src="shinsyu_science_2025_3.png">
+            
+        </section>
+
+        <!--方針-->
+        <section class="plan">
+            <h2>方針</h2>
+            <p>問題文を読んで複素数平面上の3点\(z_1\), \(z_2\), \(z_3\)が<span class="bold-txt">単位円上で正三角形をなす</span>
+                ということに気付けなければならない。
+                <br>これに気付いたうえで、 <span class="math">$$証明→\frac{z_2 }{z_1}を求める$$</span>という手順を考える。
+            </p>
+        </section>
+        
+        <!-- 広告 -->
+         <div class="ad">
+            広告スペース
+        </div>
+        
+        <!-- 解説 -->
+        <section class="solution">
+
+            <h2>解説</h2>
+
+            <h2>Ⅰ正三角形であることの証明</h2>
+            <p> <span class="math">$$ |z_2 - z_1|^2 = |z_2|^2 - z_2 \overline{z_1} - z_1 \overline{z_2} + |z_1|^2 $$</span>である。
+                |\(z_1\)| = |\(z_2\)| = |\(z_3\)| = 1であるから,
+                <span class="math">$$ |z_2 - z_1|^2 = 2 - z_2 \overline{z_1} - z_1 \overline{z_2} \qquad① $$</span>
+                また、\(z_1\) + \(z_2\) + \(z_3\) = 0より、
+                <span clss="math">$$ z_3 = - (z_1 + z_2) $$</span>
+                <span clss="math">$$ ⇔ |z_3| = |z_1 + z_2| $$</span>両辺を2乗して、
+                <span class="math">$$ |z_3|^2 = |z_1|^2 + z_1 \overline{z_2} + \overline{z_1}z_2 + |z_2|^2 $$</span>
+                <span class="math">$$ ⇔ z_1\overline{z_2} + \overline{z_1}z_2 = -1 $$</span>
+                ①にこれを用いて、
+                <span class="math">$$ |z_2 - z_1|^2 = 3$$</span>
+                <span class="math">$$ ⇔|z_2 - z_1| = \sqrt{3}$$</span>
+                となる。同様にして|\(z_3\) - \(z_2\)|, |\(z_3\) - \(z_1\)|が\(\sqrt{3}\)と求められるので、
+                <span class="math">|\(z_2\) - \(z_1\)| = |\(z_3\) - \(z_2\)| = |\(z_3\) - \(z_1\)|</span>
+                従って、三辺の長さが等しいので三点\(z_1\), \(z_2\), \(z_3\)は正三角形をなす。
+            </p>
+
+            <h2>Ⅱ\(\frac{z_2}{z_1}\)を求める</h2>
+            <p>三点は単位円上で正三角形を成すので、
+                <span class="math">$$ \frac{z_2}{z_1} = cos120° ± isin120° $$</span>
+                である。したがって、
+                <span class="math">$$ \frac{z_2}{z_1} = -\frac{1}{2} + \frac{\sqrt{3}}{2} , -\frac{1}{2} - \frac{\sqrt{3}}{2}$$</span>
+            </p>
+
+        </section>
+
+        <!--講評-->
+        <section class="point">
+
+            <h2>重要なPoint</h2>
+            <p> <span class="math">$$|z_1| = |z_2| = |z_3| = 1, z_1 + z_2 + z_3 = 0$$</span>
+                二つの条件を見て、３点\(z_1\), \(z_2\), \(z_3\)が <span class="bold-txt">単位円上で正三角形</span>を成す、ということに気付けるかが重要。
+                これは、ベクトル的に考えると理解しやすい。上の条件は <span class="bold-txt">原点を起点として、三つの単位ベクトルの和が０</span>という意味。
+                これを満たすのは正三角形のみである。この条件は他大学でそのまま出題されたりするので覚えておくと強い。
+                正三角形であることの証明は様々だが、今回は三辺の長さが等しいことを示した。他にも三角が等しいこと、二辺が等しくその間の角が等しいことなどがあげられる。
+                <br>\(\frac{z_2}{z_1}\)は <span class="bold-txt">\(z_2\)からどれほど回転させると\(z_1\)と一致するか</span>を表している。
+                A(\(z_1\)), B(\(z_2\)),C(\(z_3\))とすると三角形ABCは正三角形であるから、 <span class="math">$$∠AOB = 120°$$</span>とわかる。
+                つまり\(\frac{z_2}{z_1}\)の偏角が120°(または-120°)とわかる。
+            </p>
+
+        </section>
+
+    </main>
+
+<footer>
+    <a href="C:\HTML\MathWebSite\shinsyu_2025\privacy-policy.html">プライバシーポリシー.</a>
+<p>(C)2026 スッキリ数学ラボ.</p>
+</footer>
+
+</body>
+</html>
